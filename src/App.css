@@ -1,38 +1,991 @@
-.App {
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 350px !important;
+  padding: 40px 40px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.suggestion-list-container {
+  padding: 20px;
+  background-color: #fafafa; 
+  border: 1px solid #e2e2e2;
+}
+
+.suggestion-header {
   text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px 5px 0 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.suggestion-card {
+  background-color: #ffffff;
+  margin: 10px 0;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  padding: 10px 20px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.suggestion-card:hover {
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.suggestion-description {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.suggestion-footer {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.approve-btn, .reject-btn {
+  padding: 7px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.approve-btn {
+  background-color: #4CAF50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reject-btn {
+  background-color: #f44336;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.approve-btn:hover {
+  background-color: #45a049;
 }
+
+.reject-btn:hover {
+  background-color: #da190b;
+}
+
+
+/* CollaboratorList.css */
+.collab-list-container {
+  padding: 20px;
+  background-color: #f1f1f1; 
+  border: 1px solid #d1d1d1;
+}
+.collab-header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px 5px 0 0;
+}
+.collab-card {
+  background-color: #ffffff;
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.collab-card {
+  display: flex;      /* Convertit la disposition de l'élément en flexbox */
+  justify-content: space-between; /* Espace les éléments enfant également sur l'axe principal (horizontal) */
+  align-items: center; /* Centre les éléments enfant sur l'axe croisé (vertical) */
+  padding: 10px;      /* Espace autour du contenu pour une meilleure apparence */
+}
+.collab-card button {
+  background-color: #4CAF50; /* Couleur de fond verte */
+  border: none; /* Aucune bordure */
+  color: white; /* Couleur du texte blanc */
+  padding: 8px 16px; /* Rembourrage autour du texte */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Aucune décoration de texte (comme sous-lignement) */
+  display: inline-block; /* Le rend comme un élément en ligne avec un bloc */
+  font-size: 16px; /* Taille de police */
+  margin: 4px 2px; /* Marge autour du bouton */
+  cursor: pointer; /* Curseur en forme de main lorsque vous survolez */
+  border-radius: 12px; /* Bords arrondis */
+  transition-duration: 0.4s; /* Effet de transition douce lors du survol ou du clic */
+}
+
+.collab-card button:hover {
+  background-color: #45a049; /* Une nuance de vert légèrement différente au survol */
+  color: white; /* Couleur du texte reste blanc */
+}
+
+
+.collab-card:hover {
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.15);
+}
+.collab-name {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+.collab-email {
+  color: #777;
+  font-size: 0.9em;
+}
+
+
+.objective-item {
+  cursor: pointer; /* Change le curseur en une main quand on survole */
+  padding: 7px;
+  border: 2px solid transparent; /* Initialisation transparente pour éviter les mouvements inattendus lors de la sélection */
+  transition: border 0.3s; /* Transition douce lors de la sélection */
+}
+
+.objective-item:hover {
+  background-color: #f7f7f7; /* Changement de couleur de fond lors du survol pour une indication visuelle */
+}
+
+.objective-item.selected {
+  border: 1px solid #007BFF; /* Cadre bleu lorsque l'objectif est sélectionné */
+}
+
+
+.objective-list-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.objective-header {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.objective-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.objective-description,
+.objective-deadline {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 5px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.update-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.update-btn:hover,
+.delete-btn:hover {
+  opacity: 0.8;
+}
+.objective-header {
+  font-size: 24px;
+  color: #343a40; /* Couleur de texte foncée */
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f9fa; /* Fond clair */
+  border-bottom: 3px solid #17a2b8; /* Ligne inférieure pour le titre */
+  margin-bottom: 20px; /* Espacement entre le titre et le contenu suivant */
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1); /* Ombre légère pour donner de la profondeur */
+  transition: background-color 0.3s ease; /* Transition en douceur pour les effets hover */
+}
+
+.objective-header:hover {
+  background-color: #e9ecef; /* Changement de couleur d'arrière-plan lorsque la souris survole le titre */
+}
+
+.error-message {
+  color: red;
+  background-color: #ffe5e5; 
+  padding: 10px;
+  border: 1px solid red;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.success-message {
+  padding: 10px 15px;
+  background-color: #e1f8e7;   /* Vert clair */
+  border: 1px solid #4CAF50;   /* Vert */
+  color: #4CAF50;              /* Vert */
+  border-radius: 4px;          /* Arrondit les coins */
+  margin: 10px 0;              /* Espacement au-dessus et en dessous du message */
+  font-weight: bold;           /* Texte en gras */
+  display: inline-block;      /* Pour que la boîte s'ajuste au contenu */
+}
+
+
+
+.objective-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  margin: 10px 0;
+  border-radius: 5px;
+}  
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+
+.button {
+  padding: 5px 15px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-share {
+  background-color: #4CAF50;
+  color: #fff;
+}
+.button-update {
+  background-color: #0099FF;
+  color: #fff;
+}
+
+
+.collaborator-list {
+  list-style: none;
+  padding-left: 0;
+}
+.collaborator-item {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 8px;
+  transition: background-color 0.3s;
+}
+.collaborator-item button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.collaborator-item button:hover {
+  background-color: #0056b3;
+}
+.collaborator-item:hover {
+  background-color: #f3f3f3; /* couleur de fond lors du survol */
+}
+.collaborator-item.selected {
+  border: 2px solid #007BFF; /* cadre bleu pour les éléments sélectionnés */
+  background-color: #e6f0ff; /* couleur de fond pour les éléments sélectionnés */
+}
+
+.alert-message {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #4CAF50;  /* Vert pour le contour */
+  background-color: #DFF2BF;  /* Vert clair pour le fond */
+  text-align: center;
+  font-size: 16px;
+  color: #4CAF50;  /* Vert pour le texte */
+}
+
+.ob-header {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff;  /* Couleur du texte en blanc */
+  background-color: #007BFF;  /* Couleur de fond bleue */
+  padding: 10px 20px;  /* Espacement intérieur pour donner de l'espace autour du texte */
+  border-radius: 10px;  /* Arrondit les coins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Une ombre douce pour donner un peu de profondeur */
+  transition: transform 0.2s;  /* Animation douce lors du survol */
+}
+
+.ob-header:hover {
+  transform: translateY(-5px);  /* Effet de "soulèvement" lors du survol */
+}
+
+
+/* Container principal */
+.shared-objectives-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f7f9fc;
+}
+
+/* Titre */
+.shared-objectives-container h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+    background-color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.shared-objectives-container h2:hover {
+    transform: translateY(-5px);
+}
+
+/* Liste des objectifs partagés */
+.shared-objective-item {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border-left: 4px solid #007BFF;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.shared-objective-item p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.suggestions-container {
+  margin: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-header {
+  background-color: #4CAF50;  /* couleur verte douce */
+  color: white;
+  padding: 10px 15px;
+  margin: -20px -20px 20px -20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.suggestion-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.suggestion-description {
+  flex: 1;
+}
+
+.suggestion-status {
+  flex: 1;
+  text-align: center;
+}
+
+.objective-meta {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 5px;
+}
+
+
+
+.profile-container {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.avatar-section {
+  flex: 0 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  position: relative;
+
+}
+
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.color-picker {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+.info-section {
+  flex-grow: 1;
+}
+
+.info-section h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.info-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info-section li {
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.color-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: absolute;  
+  z-index: 1000;  
+  top: 67%;
+  padding-top: 1px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+
+
+.profile-title {
+  font-size: 24px; 
+  color: #333; /* Couleur du texte foncé */
+  text-align: center;
+  margin-top: 20px; /* Espacement par rapport à l'élément précédent */
+  margin-bottom: 40px; /* Espacement par rapport à l'élément suivant */
+  border-bottom: 2px solid #e0e0e0; /* Une fine ligne sous le titre */
+  padding-bottom: 10px; /* Espacement entre le texte et la ligne */
+  display: inline-block;
+  position: relative;
+}
+
+.profile-title strong {
+  color: #3498db; /* Une couleur bleue pour mettre en évidence le nom d'utilisateur */
+}
+
+/* Pour ajouter une petite décoration sur les côtés de la ligne */
+.profile-title::before,
+.profile-title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 25%;
+  height: 2px;
+  background: #3498db; /* La même couleur bleue que le nom d'utilisateur */
+}
+
+.profile-title::before {
+  left: 0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.4s;
+}
+
+.profile-title::after {
+  right: 0;
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s;
+}
+
+.profile-title:hover::before,
+.profile-title:hover::after {
+  transform: translateY(-50%) scaleX(1);
+}
+
+
+
+/* Palette de couleurs */
+:root {
+  --primary-color: #3498db; 
+  --secondary-color: #e74c3c; 
+  --neutral-light: #f7f9fc;
+  --neutral-dark: #2c3e50;
+  --text-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--neutral-light);
+}
+
+.task-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  margin-bottom: 1rem; /* Réduction de la marge en bas */
+
+}
+
+.status-block {
+  flex: 1;
+  border: 1px solid var(--neutral-dark);
+  padding: 1rem;
+  margin: 0 1rem;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px var(--shadow-color);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.status-block:hover {
+  transform: translateY(-5px); /* Effet de levage au survol */
+}
+
+.status-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.status-block span {
+  font-weight: bold;
+}
+
+/* Styles spécifiques pour chaque statut */
+.status-block:nth-child(1) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.status-block:nth-child(2) {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.status-block:nth-child(3) {
+  border-color: #27ae60; /* Une couleur verte pour les tâches terminées */
+  color: #27ae60;
+}
+
+.calendar-section {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px var(--shadow-color);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem; /* Ajout d'une marge en haut pour séparer de la section précédente */
+
+}
+
+[style*="backgroundColor: blue"] {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+  border-radius: 4px;
+  padding: 0.25rem;
+}
+
+.header-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Aligner les éléments à gauche */
+  padding: 1rem 2rem; /* Espace autour pour éviter que le titre ne touche les bords */
+}
+
+.dashboard-title {
+  font-size: 1.7rem;
+  color: var(--neutral-dark);
+  margin: 0 0 0.5rem 0; /* Réduction de la marge en bas */
+  text-align: left;
+  font-weight: 600;
+  padding-bottom: 0.25rem; /* Réduction du padding en bas */
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--neutral-dark);
+    margin-top: 1rem;           /* Réduction de la marge en haut */
+    text-align: left; 
+    font-weight: 600;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 0.25rem;    /* Réduction du padding en bas */
+}
+.view-deadline-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-deadline-button:hover {
+  background-color: #0056b3; /* Une nuance légèrement plus foncée pour l'effet de survol */
+}
+
+/* Styles pour la modale */
+.react-modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.react-modal-content {
+  width: 80%;
+  max-width: 600px;
+  background: var(--neutral-light);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.close-modal-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.modal-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.modal-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-list-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--neutral-dark);
+}
+
+.modal-list-item:last-child {
+  border-bottom: none;
+}
+
+
+
+
+
+/* Manager*/
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f5f7;
+  color: #333;
+}
+
+.manager-home > .left-content {
+  width: 65%;  
+}
+
+.manager-home > .calendar-section1 {
+  width: 35%;
+}
+
+.manager-home {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.left-content, .calendar-section1 {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+
+.calendar-section1 {
+  overflow: hidden;
+}
+
+.manager-home h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.manager-home table {
+  width: 100%;
+  border-collapse: collapse;
+  transition: all 0.3s ease;
+}
+
+.manager-home th, .manager-home td {
+  padding: 10px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.manager-home th {
+  background-color: #e8eaf6;
+  color: #34495e;
+}
+
+.manager-home tr:last-child td {
+  border-bottom: none;
+}
+
+.manager-home tr:hover {
+  background-color: #f5f6fa;
+}
+
+.mixed-chart {
+  text-align: center;
+}
+
+.manager-home > section {
+  margin: 0 0 20px 0;
+  padding: 10px;
+}
+
+.left-content:hover, .calendar-section:hover {
+  transform: translateY(-5px);
+}
+
+.manager-home .status-block {
+  background-color: #f4f6fc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.suggestion-section {
+  background-color: #e8f0fe;  /* subtle blue shade */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.suggestion-section:hover {
+  transform: translateY(-5px);
+}
+
+.suggestion-section h2 {
+  color: #34495e;  /* darker blue shade for contrast */
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.suggestions-count {
+  background-color: #4a90e2;  /* vibrant blue */
+  color: #ffffff;  /* white text on the badge for readability */
+  padding: 10px 20px;
+  border-radius: 20px;  /* rounded corners for the badge */
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.calendar-section1 {
+  background-color: #f6f8fa;  /* subtle grey background */
+  padding: 20px;
+  border-radius: 10px;  /* gentle rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.calendar-section1 h2 {
+  color: #2c3e50;  /* darker shade */
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.add-meeting-btn {
+  background-color: #4a90e2;  /* vibrant blue for the button */
+  color: #ffffff;  /* white text */
+  border: none;
+  border-radius: 25px;  /* pill-like rounded button */
+  padding: 10px 30px;  /* padding for a larger click area */
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;  /* pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* subtle shadow for depth */
+  transition: all 0.3s ease;
+}
+
+.add-meeting-btn:hover {
+  background-color: #357ab7;  /* a slightly darker blue on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  /* a slightly larger shadow on hover */
+  transform: translateY(-2px);  /* a subtle lift on hover */
+}
+
+/* Base colors */
+:root {
+  --primary: #3498db;
+  --secondary: #2ecc71;
+  --danger: #e74c3c;
+  --neutral-dark: #2c3e50;
+  --neutral-light: #ecf0f1;
+}
+
+.manager-home {
+background-color: var(--neutral-light);
+}
+
+.manager-home h2 {
+color: var(--primary);
+border-bottom: 3px solid var(--primary); /* Adds a bottom border to section titles */
+padding-bottom: 10px;
+}
+
+.suggestion-section {
+border-left: 5px solid var(--danger); /* Adds a left border to make this section stand out */
+}
+
+.suggestion-section h2 {
+color: var(--danger);
+}
+
+.suggestions-count {
+background-color: var(--danger);
+}
+
+.manager-home th {
+background-color: var(--primary);
+color: white; 
+}
+
+.add-meeting-btn {
+background-color: var(--secondary);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-meeting-btn:hover {
+background-color: #27ae60;  /* Slightly darker shade of the secondary color */
+}
+
+/* styles for Objective status */
+.manager-home td {
+transition: all 0.3s ease;
+}
+
+.manager-home td:hover {
+background-color: var(--neutral-light);
+}
+
+td[data-status="OPEN"] {
+color: var(--primary);
+}
+
+td[data-status="IN_PROGRESS"] {
+color: var(--secondary);
+}
+
+td[data-status="COMPLETED"] {
+color: #7d8c99; 
+}
+
+
